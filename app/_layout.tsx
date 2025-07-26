@@ -1,5 +1,3 @@
-// app/layout.tsx (or wherever your root layout lives)
-
 import Spinner from '@/components/ui/Spinner';
 import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 import { store } from '@/lib/store';
@@ -42,6 +40,7 @@ const AppContent = () => {
       <Stack screenOptions={{ headerShown: false }} >
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(admin)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" options={{ title: 'Oops!' }} />
       </Stack>
     </SafeAreaView>
@@ -68,7 +67,7 @@ export default function RootLayout() {
   }, [onLayoutRootView]);
 
   if (!fontsLoaded && !fontError) {
-    return null; // Keep showing splash until fonts are ready
+    return null;
   }
 
   return (

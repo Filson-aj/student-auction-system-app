@@ -1,7 +1,7 @@
 import { Item, User, } from '@/types/auction';
 
 export const PORT = 5000
-export const SERVER = `192.168.130.199`
+export const SERVER = `192.168.213.199`
 export const URL = `http://${SERVER}:${PORT}/api`
 export const BASE_URL = `http://${SERVER}:${PORT}`
 export const URL_AUTH = `http://${SERVER}:${PORT}/api/auth`
